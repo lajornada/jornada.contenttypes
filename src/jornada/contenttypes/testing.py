@@ -29,6 +29,8 @@ class JornadacontenttypesLayer(PloneSandboxLayer):
 #        # Uninstall products installed above
 #        z2.uninstallProduct(app, 'Products.PloneFormGen')
 
+    def setUpPloneSite(self, portal):
+        applyProfile(portal, 'jornada.contenttypes:default')
 
 JORNADA_CONTENTTYPES_FIXTURE = JornadacontenttypesLayer()
 JORNADA_CONTENTTYPES_INTEGRATION_TESTING = IntegrationTesting(
